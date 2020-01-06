@@ -1,0 +1,26 @@
+# Macro file for AC_simulation
+# 
+# Can be run in batch, without graphic
+# or interactively: Idle> /control/execute run1.mac
+#
+# Change the default number of workers (in multi-threading mode) 
+#
+# Initialize kernel
+/run/initialize
+#
+/control/verbose 0
+/run/verbose 0
+/event/verbose 0
+/tracking/verbose 0
+
+/control/macroPath ../../../build/macro/testbench/
+
+/control/alias runNum 100000
+/gun/particle opticalphoton
+/gun/polarization 0 0 1
+/gun/direction 0 0 1
+/gun/position 0 30 -5 mm
+/gun/momentumAmp 3.4925 eV
+/gun/number 200
+/simulateAC/save/fileName testbench_355nm
+/run/beamOn {runNum}

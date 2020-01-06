@@ -1,0 +1,5 @@
+# Macro file for AC_simulation
+# This macro is used in posrun_main.mac, not alone!
+/simulateAC/save/fileName posrun_{pName}_{posIn}_{pE}
+/simulateAC/gun/single/incidentPosition {posIn} mm
+/run/beamOn {runNum}

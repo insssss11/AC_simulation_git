@@ -1,0 +1,101 @@
+/run/verbose 2
+/run/initialize 
+/run/physicsModified 
+/tracking/storeTrajectory 2
+/tracking/storeTrajectory 3
+sceneHandler/create OGL
+/vis/viewer/create ! ! 600x600-0+0
+/vis/viewer/refresh
+/vis/viewer/set/autoRefresh false
+/vis/verbose errors
+/vis/drawVolume
+/vis/scene/create
+/vis/scene/add/volume world
+/vis/sceneHandler/attach
+/vis/viewer/set/viewpointVector -1 0 0
+/vis/viewer/set/lightsVector -1 0 0
+/vis/viewer/set/style wireframe
+/vis/viewer/set/auxiliaryEdge true
+/vis/viewer/set/lineSegmentsPerCircle 150
+/vis/scene/add/trajectories smooth
+/tracking/storeTrajectory 2
+/vis/scene/notifyHandlers
+/vis/modeling/trajectories/create/drawByCharge
+/vis/modeling/trajectories/drawByCharge-0/default/setDrawStepPts true
+/vis/scene/notifyHandlers scene-0
+/vis/modeling/trajectories/drawByCharge-0/default/setStepPtsSize 2
+/vis/scene/notifyHandlers scene-0
+/vis/scene/add/hits
+/vis/scene/notifyHandlers
+/vis/scene/endOfEventAction accumulate
+/vis/set/textColour green
+/vis/set/textLayout right
+/vis/scene/add/text2D 0.9 -.9 24 ! ! simulateAC
+/vis/scene/notifyHandlers
+/vis/set/textLayout
+/vis/set/textColour
+/vis/scene/add/scale
+/vis/scene/notifyHandlers
+/vis/scene/add/axes 0 0 0 10 cm
+/vis/scene/notifyHandlers
+/vis/viewer/zoomTo 3
+/vis/set/lineWidth
+/vis/geometry/set/visibility World 0 false
+/vis/scene/notifyHandlers
+/vis/geometry/set/visibility Scorer 0 false
+/vis/scene/notifyHandlers
+/vis/geometry/set/visibility GuideCase 0 false
+/vis/scene/notifyHandlers
+/vis/geometry/set/visibility HolderCase 0 false
+/vis/scene/notifyHandlers
+/vis/geometry/set/visibility Case 0 false
+/vis/geometry/set/visibility Cathode 0 false
+/vis/scene/notifyHandlers
+/vis/geometry/set/colour Scorer 0 0.4 0.9 0.9 .2
+/vis/scene/notifyHandlers
+/vis/geometry/set/colour Glass 0 0.1 0.1 0.9 0.5
+/vis/scene/notifyHandlers
+/vis/geometry/set/colour In 0 1 1 1 0.25
+/vis/scene/notifyHandlers
+/vis/geometry/set/forceWireframe Aerogel 0 true
+/vis/geometry/set/forceWireframe Aerogel0 0 true
+/vis/geometry/set/forceWireframe Aerogel1 0 true
+/vis/scene/notifyHandlers
+/vis/geometry/set/forceWireframe Aerogel2 0 true
+/vis/scene/notifyHandlers
+/vis/geometry/set/forceWireframe Aerogel3 0 true
+/vis/scene/notifyHandlers
+/vis/geometry/set/forceWireframe Aerogel4 0 true
+/vis/geometry/set/forceWireframe Aerogel5 0 true
+/vis/geometry/set/forceWireframe Aerogel6 0 true
+/vis/viewer/set/style surface
+/vis/viewer/set/hiddenMarker true
+/vis/viewer/set/autoRefresh true
+/vis/viewer/refresh
+/vis/verbose warnings
+/vis/scene/add/trajectories rich
+/tracking/storeTrajectory 3
+/vis/scene/notifyHandlers
+/vis/filtering/trajectories/create/encounteredVolumeFilter GC
+/vis/filtering/trajectories/GC/add GuideCase
+/vis/scene/notifyHandlers scene-0
+/vis/filtering/trajectories/GC/active false
+/vis/scene/notifyHandlers scene-0
+/vis/filtering/trajectories/create/encounteredVolumeFilter PMT
+/vis/filtering/trajectories/PMT/add Glass
+/vis/scene/notifyHandlers scene-0
+/vis/filtering/trajectories/PMT/active false
+/vis/scene/notifyHandlers scene-0
+/vis/open OGL 600x600-0+0
+/vis/sceneHandler/create OGL
+/vis/sceneHandler/attach
+/vis/viewer/create ! ! 600x600-0+0
+/vis/viewer/refresh
+/vis/viewer/select viewer-1
+/vis/viewer/zoomTo 2
+/vis/viewer/refresh
+/vis/viewer/set/upVector 1 0 0
+/vis/viewer/refresh
+/vis/viewer/set/viewpointVector 0 1 0
+/vis/viewer/refresh
+/run/beamOn 1

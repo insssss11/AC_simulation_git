@@ -1,0 +1,54 @@
+# Macro file for AC_simulation
+# 
+# Can be run in batch, without graphic
+# or interactively: Idle> /control/execute run1.mac
+#
+# Change the default number of workers (in multi-threading mode) 
+#
+# Initialize kernel
+/run/initialize
+#
+/control/verbose 0
+/run/verbose 0
+/event/verbose 0
+/tracking/verbose 0
+
+/control/macroPath ../../../build/macro/posrun/
+
+/control/alias runNum 100000
+/simulateAC/gun/single/incidentAngle 40 deg
+
+#########################################################
+# kaon beam
+# kaon+ p = 1500 MeV/c, beta = ? 
+/control/alias pName kaon+
+/control/alias pE 1000
+
+/simulateAC/gun/single/particle {pName}
+/simulateAC/gun/single/momentumAmp {pE} MeV
+
+# for loop
+/control/loop posrun_single.mac posIn 0 240 10
+
+#########################################################
+# pion beam
+# pion+ p = 1000 MeV/c, beta = ? 
+/control/alias pName pi+
+/control/alias pE 1000
+
+/simulateAC/gun/single/particle {pName}
+/simulateAC/gun/single/momentumAmp {pE} MeV
+
+# for loop
+/control/loop posrun_single.mac posIn 0 240 10
+#########################################################
+# electron beam
+# e+ p = 500 MeV/c, beta = ?
+/control/alias pName e-
+/control/alias pE 500 
+
+/simulateAC/gun/single/particle {pName}
+/simulateAC/gun/single/momentumAmp {pE} MeV
+
+# for loop
+/control/loop posrun_single.mac posIn 0 240 10

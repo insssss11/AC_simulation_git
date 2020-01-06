@@ -1,0 +1,34 @@
+# Macro file for AC_simulation
+# 
+# Can be run in batch, without graphic
+# or interactively: Idle> /control/execute run1.mac
+#
+# Change the default number of workers (in multi-threading mode) 
+#
+# Initialize kernel
+/run/initialize
+#
+/control/verbose 0
+/run/verbose 0
+/event/verbose 0
+/tracking/verbose 0
+
+/control/macroPath ../../../build/macro/tokokurun/
+
+/control/alias runNum 10000
+/simulateAC/gun/single/incidentAngle 40 deg
+
+#########################################################
+# proton beam
+# proton p = 80 MeV/c, beta = ? 
+/control/alias pName proton
+/control/alias pE 80
+/control/alias posIn 131
+
+/simulateAC/gun/single/particle {pName}
+/simulateAC/gun/single/momentumAmp {pE} MeV
+
+# Macro file for AC_simulation
+/simulateAC/save/fileName tohokurun_{pName}_{posIn}_{pE}_emp
+/simulateAC/gun/single/incidentPosition {posIn} mm
+/run/beamOn {runNum}

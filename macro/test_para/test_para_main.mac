@@ -1,0 +1,16 @@
+# this macro generate optical photons and accumulate trajectories
+# before executing it, {angle} should be defined using /control/alias
+
+/control/macroPath ../../../build/macro/test_para
+
+/vis/viewer/flush
+/vis/viewer/rebuild
+/vis/scene/endOfEventAction accumulate
+/vis/scene/endOfRunAction accumulate
+/vis/filtering/trajectories/PMT/reset
+/vis/filtering/trajectories/PMT/add Glass
+/vis/filtering/trajectories/PMT/invert true
+/gun/particle opticalphoton
+/gun/momentumAmp 2.2 eV
+/simulateAC/gun/single/incidentAngle {angle} deg
+/control/loop test_para_single.mac ypos 40 75 1

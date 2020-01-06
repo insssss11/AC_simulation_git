@@ -1,0 +1,26 @@
+# Macro file for AC_simulation
+# 
+# Can be run in batch, without graphic
+# or interactively: Idle> /control/execute run1.mac
+#
+# Change the default number of workers (in multi-threading mode) 
+#
+# Initialize kernel
+/run/initialize
+#
+/control/verbose 0
+/run/verbose 0
+/event/verbose 0
+/tracking/verbose 0
+
+/control/macroPath ../../build/macro/leps2run/
+
+/control/alias runNum 500000
+
+#########################################################
+## changing to leps2 gun mode
+/simulateAC/gun/mode leps2 
+/simulateAC/save/fileName leps2run
+
+#########################################################
+/run/beamOn {runNum} 
