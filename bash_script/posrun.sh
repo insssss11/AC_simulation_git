@@ -26,7 +26,7 @@ echo "
 
 cd $SOURCEDIR/$BUILDDIR
 cmake $SOURCEDIR -DDESIGN=$TYPENAME
-make -j8
+make
 rm -rf $SOURCEDIR/result/posrun/$TYPENAME/
 mkdir $SOURCEDIR/result/posrun/$TYPENAME/
 cd $SOURCEDIR/result/posrun/$TYPENAME/

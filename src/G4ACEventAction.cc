@@ -56,7 +56,10 @@ void G4ACEventAction::BeginOfEventAction(const G4Event*)
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 void G4ACEventAction::EndOfEventAction(const G4Event* event)
-{   
+{  
+  G4int evtId = event->GetEventID();
+  if((evtId + 1)%100 == 0)
+    G4cout << ">>event : " << evtId + 1 << G4endl;
   auto man = G4AnalysisManager::Instance();
   man->AddNtupleRow(0);
 }
