@@ -1,0 +1,133 @@
+/run/verbose 2
+/run/initialize /control/execute vis.ma/tracking/storeTrajectory 2
+/tracking/storeTrajectory 3
+/simulateAC/gun/single/incidentPosition 0 mm
+/gun/particle e-
+/gun/momentumAmp 500 MeV
+se
+/vis/verbose errors
+/vis/drawVolume
+/vis/scene/create
+/vis/scene/add/volume world -1 -1 none m 0 0 0 0 0 0
+/vis/sceneHandler/attach
+/vis/viewer/set/viewpointVector -1 0 0
+/vis/viewer/set/lightsVector -1 0 0
+/vis/viewer/set/style wireframe
+/vis/viewer/set/auxiliaryEdge true
+/vis/viewer/set/lineSegmentsPerCircle 150
+/vis/scene/add/trajectories smooth
+/tracking/storeTrajectory 2
+/vis/scene/notifyHandlers
+/vis/modeling/trajectories/create/drawByCharge
+/vis/modeling/trajectories/drawByCharge-0/default/setDrawStepPts true
+/vis/scene/notifyHandlers scene-0
+/vis/modeling/trajectories/drawByCharge-0/default/setStepPtsSize 2
+/vis/scene/notifyHandlers scene-0
+/vis/scene/add/hits
+/vis/scene/notifyHandlers
+/vis/modeling/trajectories/create/drawByParticleID
+/vis/modeling/trajectories/drawByParticleID-0/set pi+ blue
+/vis/scene/notifyHandlers scene-0
+/vis/modeling/trajectories/drawByParticleID-0/set pi- red
+/vis/scene/notifyHandlers scene-0
+/vis/modeling/trajectories/drawByParticleID-0/set proton grey
+/vis/scene/notifyHandlers scene-0
+/vis/modeling/trajectories/drawByParticleID-0/set opticalphoton green
+/vis/scene/notifyHandlers scene-0
+/vis/modeling/trajectories/drawByParticleID-0/set kaon+ green
+/vis/scene/notifyHandlers scene-0
+/vis/modeling/trajectories/drawByParticleID-0/set lambda yellow
+/vis/scene/notifyHandlers scene-0
+/vis/set/textColour green
+/vis/set/textLayout right
+/vis/scene/add/text2D 0.9 -.9 24 ! ! simulateAC
+/vis/scene/notifyHandlers
+/vis/set/textLayout
+/vis/set/textColour
+/vis/scene/add/scale
+/vis/scene/notifyHandlers
+/vis/viewer/zoomTo 3
+/vis/set/lineWidth
+/vis/geometry/set/visibility World 0 false
+/vis/scene/notifyHandlers
+/vis/geometry/set/visibility Scorer 0 true
+/vis/scene/notifyHandlers
+/vis/geometry/set/visibility GuideCase 0 false
+/vis/scene/notifyHandlers
+/vis/geometry/set/visibility HolderCase 0 false
+/vis/scene/notifyHandlers
+/vis/geometry/set/visibility GuideReflector 0 false
+/vis/scene/notifyHandlers
+/vis/geometry/set/visibility HolderReflector 0 false
+/vis/scene/notifyHandlers
+/vis/geometry/set/visibility Case 0 false
+/vis/geometry/set/visibility Cathode 0 true
+/vis/scene/notifyHandlers
+/vis/geometry/set/colour Scorer 0 0.4 0.9 0.9 .2
+/vis/scene/notifyHandlers
+/vis/geometry/set/colour Glass 0 0.1 0.1 0.9 0.5
+/vis/scene/notifyHandlers
+/vis/geometry/set/colour In 0 1 1 1 0.25
+/vis/scene/notifyHandlers
+/vis/geometry/set/colour HolderCase 0 0.1 0.1 0.9 0.2
+/vis/scene/notifyHandlers
+/vis/geometry/set/forceWireframe Aerogel 0 true
+/vis/geometry/set/forceWireframe Aerogel0 0 true
+/vis/geometry/set/forceWireframe Aerogel1 0 true
+/vis/scene/notifyHandlers
+/vis/geometry/set/forceWireframe Aerogel2 0 true
+/vis/scene/notifyHandlers
+/vis/geometry/set/forceWireframe Aerogel3 0 true
+/vis/geometry/set/forceWireframe Aerogel4 0 true
+/vis/geometry/set/forceWireframe Aerogel5 0 true
+/vis/geometry/set/forceWireframe Aerogel6 0 true
+/vis/viewer/set/style surface
+/vis/viewer/set/hiddenMarker true
+/vis/viewer/set/autoRefresh true
+/vis/viewer/refresh
+/vis/verbose warnings
+/vis/scene/add/trajectories rich
+/tracking/storeTrajectory 3
+/vis/scene/notifyHandlers
+/vis/filtering/trajectories/create/encounteredVolumeFilter GC
+/vis/filtering/trajectories/GC/add GuideCase
+/vis/scene/notifyHandlers scene-0
+/vis/filtering/trajectories/GC/active false
+/vis/scene/notifyHandlers scene-0
+/vis/filtering/trajectories/create/encounteredVolumeFilter PMT
+/vis/filtering/trajectories/PMT/add Glass
+/vis/scene/notifyHandlers scene-0
+/vis/filtering/trajectories/PMT/active false
+/vis/scene/notifyHandlers scene-0
+/run/beamOn 1
+/simulateAC/gun/single/incidentPosition 0 mm
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/gun/particle e-
+/gun/momentumAmp 500 MeV
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1
+/run/beamOn 1

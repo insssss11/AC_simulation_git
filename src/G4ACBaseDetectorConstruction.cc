@@ -308,7 +308,6 @@ void G4ACBaseDetectorConstruction::ConstructMaterial()
   fMatAerogel->AddMaterial(matSiO2, 62.5*perCent);
   fMatAerogel->AddMaterial(matH2O, 37.4*perCent);
   fMatAerogel->SetMaterialPropertiesTable(MPTaerogel);
-  
   /////////////////////////////////////////////////////////////////
   // Air Material
   /////////////////////////////////////////////////////////////////   
@@ -1051,7 +1050,7 @@ G4double  G4ACBaseDetectorConstruction::GetAerogelAbs(G4double peV)
     return 0;
   }
 
-  return fSplineAeroAbs->Eval(peV)*cm < 0? 0.1 * cm : fSplineAeroAbs->Eval(peV) * cm;
+  return fSplineAeroAbs->Eval(peV) < 0? 0.1 * cm : fSplineAeroAbs->Eval(peV);
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......

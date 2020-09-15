@@ -1,0 +1,8 @@
+/mnt/c/Users/yang/Dropbox/YangHyunmin/coding/AC_simulation_git/build/CMakeFiles/install/strip.dir
+/mnt/c/Users/yang/Dropbox/YangHyunmin/coding/AC_simulation_git/build/CMakeFiles/install/local.dir
+/mnt/c/Users/yang/Dropbox/YangHyunmin/coding/AC_simulation_git/build/CMakeFiles/install.dir
+/mnt/c/Users/yang/Dropbox/YangHyunmin/coding/AC_simulation_git/build/CMakeFiles/edit_cache.dir
+/mnt/c/Users/yang/Dropbox/YangHyunmin/coding/AC_simulation_git/build/CMakeFiles/AC_simulation.dir
+/mnt/c/Users/yang/Dropbox/YangHyunmin/coding/AC_simulation_git/build/CMakeFiles/simulateAC.dir
+/mnt/c/Users/yang/Dropbox/YangHyunmin/coding/AC_simulation_git/build/CMakeFiles/rebuild_cache.dir
+/mnt/c/Users/yang/Dropbox/YangHyunmin/coding/AC_simulation_git/build/CMakeFiles/list_install_components.dir
